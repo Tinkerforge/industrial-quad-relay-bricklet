@@ -38,7 +38,8 @@ Software
 
 To compile the c code we recommend you to install the newest CodeSourcery arm
 eabi gcc compiler 
-(http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite). You also need to install bricklib (https://github.com/Tinkerforge/bricklib)
+(http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite).
+You also need to install bricklib (https://github.com/Tinkerforge/bricklib)
 and brickletlib (https://github.com/Tinkerforge/brickletlib). 
 You can either clone them directly in software/src/ or clone them in a 
 seperate folder and symlink them into software/src/
@@ -47,5 +48,5 @@ seperate folder and symlink them into software/src/
 After that you can generate a Makefile from the cmake script with the
 generate_makefile shell script (in software/) and build the firmware 
 by invoking make in software/build/. The firmware (.bin) can then be found
-in software/build/ and uploaded with brickv (click button "advanced features"
+in software/build/ and uploaded with brickv (click button "Flashing"
 on start screen).
