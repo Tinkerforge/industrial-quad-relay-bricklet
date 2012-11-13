@@ -1,6 +1,5 @@
 /* industrial-quad-relay-bricklet
- * Copyright (C) 2012 Matthias Bolte <matthias@tinkerforge.com>
- * Copyright (C) 2011 Olaf Lüke <olaf@tinkerforge.com>
+ * Copyright (C) 2012 Olaf Lüke <olaf@tinkerforge.com>
  *
  * config.h: Industrial Quad Relay Bricklet specific configuration
  *
@@ -32,10 +31,15 @@
 
 #include "quad_relay.h"
 
-#define BRICKLET_HARDWARE_NAME "Industrial Quad Relay Bricklet 1.0"
-#define BRICKLET_FIRMWARE_VERSION_MAJOR 1
+#define BRICKLET_FIRMWARE_VERSION_MAJOR 2
 #define BRICKLET_FIRMWARE_VERSION_MINOR 0
 #define BRICKLET_FIRMWARE_VERSION_REVISION 0
+
+#define BRICKLET_HARDWARE_VERSION_MAJOR 1
+#define BRICKLET_HARDWARE_VERSION_MINOR 0
+#define BRICKLET_HARDWARE_VERSION_REVISION 0
+
+#define BRICKLET_DEVICE_IDENTIFIER 225
 
 #define INVOCATION_IN_BRICKLET_CODE
 #define PIN0 (BS->pin1_ad)
