@@ -17,15 +17,16 @@ $ipcon->addDevice($iqr); // Add device to IP connection
 // Don't use device before it is added to a connection
 
 // Turn relays alternating on/off for 10 times with 100 ms delay
-for($i = 0; $i < 10; $i++) {
+for($i = 0; $i < 10; $i++)
+{
     usleep(1000*100);
-	$iqr->setValue(1 << 0);
+    $iqr->setValue(1 << 0);
     usleep(1000*100);
-	$iqr->setValue(1 << 1);
+    $iqr->setValue(1 << 1);
     usleep(1000*100);
-	$iqr->setValue(1 << 2);
+    $iqr->setValue(1 << 2);
     usleep(1000*100);
-	$iqr->setValue(1 << 3);
+    $iqr->setValue(1 << 3);
 }
 
 echo "Press key to exit\n";
