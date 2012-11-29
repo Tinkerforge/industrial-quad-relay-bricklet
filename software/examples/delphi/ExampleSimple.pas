@@ -25,22 +25,21 @@ var
 
 procedure TExample.Execute;
 begin
-  { Create IP connection to brickd }
-  ipcon := TIPConnection.Create(HOST, PORT);
+  { Create IP connection }
+  ipcon := TIPConnection.Create();
 
   { Create device object }
-  iqr := TBrickletIndustrialQuadRelay.Create(UID);
+  iqr := TBrickletIndustrialQuadRelay.Create(UID, ipcon);
 
-  { Add device to IP connection }
-  ipcon.AddDevice(iqr);
-  { Don't use device before it is added to a connection }
+  { Connect to brickd }
+  ipcon.Connect(HOST, PORT);
+  { Don't use device before ipcon is connected }
 
   { Turn relay 0, 3 on and relay 2, 3 off. }
   iqr.SetValue((1 shl 0) or (1 shl 3));
 
   WriteLn('Press key to exit');
   ReadLn;
-  ipcon.Destroy;
 end;
 
 begin
