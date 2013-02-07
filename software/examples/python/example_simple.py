@@ -29,3 +29,4 @@ if __name__ == "__main__":
         iqr.set_value(1 << 3)
 
     raw_input('Press key to exit\n') # Use input() in Python 3
+    ipcon.disconnect()
