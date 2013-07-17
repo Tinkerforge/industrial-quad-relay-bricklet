@@ -9,7 +9,8 @@ class Example
 	static void Main() 
 	{
 		IPConnection ipcon = new IPConnection(); // Create IP connection
-		BrickletIndustrialQuadRelay iqr = new BrickletIndustrialQuadRelay(UID, ipcon); // Create device object
+		BrickletIndustrialQuadRelay iqr =
+		  new BrickletIndustrialQuadRelay(UID, ipcon); // Create device object
 
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
