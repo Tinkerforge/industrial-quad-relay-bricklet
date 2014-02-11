@@ -10,9 +10,7 @@ var iqr = new BrickletIndustrialQuadRelay(UID, ipcon);// Create device object
 
 ipcon.connect(HOST, PORT,
     function(error) {
-        if(error === IPConnection.ERROR_ALREADY_CONNECTED) {
-            console.log('Error: Already connected');        
-        }
+        console.log('Error: '+error);        
     }
 );// Connect to brickd
 
@@ -20,23 +18,15 @@ ipcon.connect(HOST, PORT,
 ipcon.on(IPConnection.CALLBACK_CONNECTED,
     function(connectReason) {
         // Turn on first two relays and turn off last two relays
-        ipcon.on(IPConnection.CALLBACK_CONNECTED,
-            function(connectReason) {
-                iqr.setValue(3);
-            }
-        );   
+        iqr.setValue(3);
     }
 );
 
 console.log("Press any key to exit ...");
-process.stdin.on('data', function(data) {
-	    ipcon.disconnect(
-            function(error) {
-                if(error === IPConnection.ERROR_NOT_CONNECTED) {
-                    console.log('Error: Not connected');        
-                }
-            }
-        );
-process.exit(0);
-});
+process.stdin.on('data',
+    function(data) {
+        ipcon.disconnect();
+        process.exit(0);
+    }
+);
 
