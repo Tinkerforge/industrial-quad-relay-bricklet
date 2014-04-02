@@ -29,7 +29,7 @@ for (my $i = 0; $i < 10; $i++)
     $iqr->set_value(8);
 }
 
-print "\nPress any key to exit...\n";
+print "Press any key to exit...\n";
 <STDIN>;
 $ipcon->disconnect();
 
