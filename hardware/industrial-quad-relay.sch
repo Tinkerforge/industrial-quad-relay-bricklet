@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Mi 28 Nov 2012 16:09:08 CET
+EESchema Schematic File Version 2
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -31,22 +31,22 @@ LIBS:contrib
 LIBS:valves
 LIBS:tinkerforge
 LIBS:industrial-quad-relay-cache
-EELAYER 25  0
+EELAYER 27 0
 EELAYER END
-$Descr A4 11700 8267
+$Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Industrial Quad Relay"
-Date "28 nov 2012"
-Rev "1.0"
+Date "14 jan 2014"
+Rev "1.1"
 Comp "Tinkerforge GmbH"
 Comment1 "Licensed under CERN OHL v.1.1"
-Comment2 "Copyright (©) 2012, B.Nordmeyer <bastian@tinkerforge.com>"
+Comment2 "Copyright (©) 2013, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 850  850  0    60   ~ 0
-Copyright Tinkerforge GmbH 2012.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
+Copyright Tinkerforge GmbH 2013.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
 Connection ~ 7950 4800
 Wire Wire Line
 	9150 4800 7750 4800
@@ -218,6 +218,8 @@ U 1 1 5006C8FE
 P 6350 2200
 F 0 "#PWR01" H 6350 2300 40  0001 C CNN
 F 1 "3V3" H 6350 2325 40  0000 C CNN
+F 2 "" H 6350 2200 60  0001 C CNN
+F 3 "" H 6350 2200 60  0001 C CNN
 	1    6350 2200
 	1    0    0    -1  
 $EndComp
@@ -228,6 +230,7 @@ P 7950 4550
 F 0 "R4" V 8050 4600 50  0000 C CNN
 F 1 "VJ13PC0300KBA" V 7850 4550 50  0000 C CNN
 F 2 "1210" H 7950 4550 60  0001 C CNN
+F 3 "" H 7950 4550 60  0001 C CNN
 	1    7950 4550
 	1    0    0    -1  
 $EndComp
@@ -238,6 +241,7 @@ P 7950 3900
 F 0 "R3" V 8050 3950 50  0000 C CNN
 F 1 "VJ13PC0300KBA" V 7850 3900 50  0000 C CNN
 F 2 "1210" H 7950 3900 60  0001 C CNN
+F 3 "" H 7950 3900 60  0001 C CNN
 	1    7950 3900
 	1    0    0    -1  
 $EndComp
@@ -248,6 +252,7 @@ P 7950 3250
 F 0 "R2" V 8050 3300 50  0000 C CNN
 F 1 "VJ13PC0300KBA" V 7850 3250 50  0000 C CNN
 F 2 "1210" H 7950 3250 60  0001 C CNN
+F 3 "" H 7950 3250 60  0001 C CNN
 	1    7950 3250
 	1    0    0    -1  
 $EndComp
@@ -258,6 +263,7 @@ P 7950 2600
 F 0 "R1" V 8050 2650 50  0000 C CNN
 F 1 "VJ13PC0300KBA" V 7850 2600 50  0000 C CNN
 F 2 "1210" H 7950 2600 60  0001 C CNN
+F 3 "" H 7950 2600 60  0001 C CNN
 	1    7950 2600
 	1    0    0    -1  
 $EndComp
@@ -268,6 +274,7 @@ P 7150 4550
 F 0 "U5" H 7350 4800 60  0000 C CNN
 F 1 "CPC1020N" H 7150 4300 60  0000 C CNN
 F 2 "SOP4" H 7150 4550 60  0001 C CNN
+F 3 "" H 7150 4550 60  0001 C CNN
 	1    7150 4550
 	1    0    0    1   
 $EndComp
@@ -278,6 +285,7 @@ P 7150 3900
 F 0 "U4" H 7350 4150 60  0000 C CNN
 F 1 "CPC1020N" H 7150 3650 60  0000 C CNN
 F 2 "SOP4" H 7150 3900 60  0001 C CNN
+F 3 "" H 7150 3900 60  0001 C CNN
 	1    7150 3900
 	1    0    0    1   
 $EndComp
@@ -288,6 +296,7 @@ P 7150 3250
 F 0 "U3" H 7350 3500 60  0000 C CNN
 F 1 "CPC1020N" H 7150 3000 60  0000 C CNN
 F 2 "SOP4" H 7150 3250 60  0001 C CNN
+F 3 "" H 7150 3250 60  0001 C CNN
 	1    7150 3250
 	1    0    0    1   
 $EndComp
@@ -298,6 +307,7 @@ P 7150 2600
 F 0 "U2" H 7350 2850 60  0000 C CNN
 F 1 "CPC1020N" H 7150 2350 60  0000 C CNN
 F 2 "SOP4" H 7150 2600 60  0001 C CNN
+F 3 "" H 7150 2600 60  0001 C CNN
 	1    7150 2600
 	1    0    0    1   
 $EndComp
@@ -308,6 +318,7 @@ P 5350 3650
 F 0 "RP1" H 5350 4100 40  0000 C CNN
 F 1 "1k" H 5350 3600 40  0000 C CNN
 F 2 "0603X4" H 5350 3650 60  0001 C CNN
+F 3 "" H 5350 3650 60  0001 C CNN
 	1    5350 3650
 	1    0    0    -1  
 $EndComp
@@ -317,6 +328,8 @@ U 1 1 50066B39
 P 1350 7100
 F 0 "#PWR02" H 1350 7100 30  0001 C CNN
 F 1 "GND" H 1350 7030 30  0001 C CNN
+F 2 "" H 1350 7100 60  0001 C CNN
+F 3 "" H 1350 7100 60  0001 C CNN
 	1    1350 7100
 	1    0    0    -1  
 $EndComp
@@ -327,6 +340,7 @@ P 10650 7000
 F 0 "U7" H 10700 7050 60  0001 C CNN
 F 1 "DRILL" H 10650 7000 60  0000 C CNN
 F 2 "DRILL_NP" H 10650 7000 60  0001 C CNN
+F 3 "" H 10650 7000 60  0001 C CNN
 	1    10650 7000
 	1    0    0    -1  
 $EndComp
@@ -337,6 +351,7 @@ P 10650 6750
 F 0 "U6" H 10700 6800 60  0001 C CNN
 F 1 "DRILL" H 10650 6750 60  0000 C CNN
 F 2 "DRILL_NP" H 10650 6750 60  0001 C CNN
+F 3 "" H 10650 6750 60  0001 C CNN
 	1    10650 6750
 	1    0    0    -1  
 $EndComp
@@ -347,6 +362,7 @@ P 11000 6750
 F 0 "U8" H 11050 6800 60  0001 C CNN
 F 1 "DRILL" H 11000 6750 60  0000 C CNN
 F 2 "DRILL_NP" H 11000 6750 60  0001 C CNN
+F 3 "" H 11000 6750 60  0001 C CNN
 	1    11000 6750
 	1    0    0    -1  
 $EndComp
@@ -357,6 +373,7 @@ P 11000 7000
 F 0 "U9" H 11050 7050 60  0001 C CNN
 F 1 "DRILL" H 11000 7000 60  0000 C CNN
 F 2 "DRILL_NP" H 11000 7000 60  0001 C CNN
+F 3 "" H 11000 7000 60  0001 C CNN
 	1    11000 7000
 	1    0    0    -1  
 $EndComp
@@ -367,6 +384,7 @@ P 9900 3600
 F 0 "P2" V 9850 3600 60  0000 C CNN
 F 1 "Digital Output" V 9950 3600 60  0000 C CNN
 F 2 "OQ_8P" H 9900 3600 60  0001 C CNN
+F 3 "" H 9900 3600 60  0001 C CNN
 	1    9900 3600
 	1    0    0    -1  
 $EndComp
@@ -377,6 +395,8 @@ U 1 1 500657B2
 P 2100 6150
 F 0 "#PWR03" H 2100 6150 30  0001 C CNN
 F 1 "GND" H 2100 6080 30  0001 C CNN
+F 2 "" H 2100 6150 60  0001 C CNN
+F 3 "" H 2100 6150 60  0001 C CNN
 	1    2100 6150
 	1    0    0    -1  
 $EndComp
@@ -387,6 +407,7 @@ P 3300 5700
 F 0 "C1" H 3350 5800 50  0000 L CNN
 F 1 "100nF" H 3350 5600 50  0000 L CNN
 F 2 "0603" H 3300 5700 60  0001 C CNN
+F 3 "" H 3300 5700 60  0001 C CNN
 	1    3300 5700
 	0    -1   -1   0   
 $EndComp
@@ -396,6 +417,8 @@ U 1 1 50065776
 P 3500 5750
 F 0 "#PWR04" H 3500 5750 30  0001 C CNN
 F 1 "GND" H 3500 5680 30  0001 C CNN
+F 2 "" H 3500 5750 60  0001 C CNN
+F 3 "" H 3500 5750 60  0001 C CNN
 	1    3500 5750
 	1    0    0    -1  
 $EndComp
@@ -405,6 +428,8 @@ U 1 1 5006576B
 P 3900 6350
 F 0 "#PWR05" H 3900 6350 30  0001 C CNN
 F 1 "GND" H 3900 6280 30  0001 C CNN
+F 2 "" H 3900 6350 60  0001 C CNN
+F 3 "" H 3900 6350 60  0001 C CNN
 	1    3900 6350
 	1    0    0    -1  
 $EndComp
@@ -415,6 +440,8 @@ U 1 1 5004F89B
 P 3050 5700
 F 0 "#PWR06" H 3050 5800 40  0001 C CNN
 F 1 "3V3" H 3050 5825 40  0000 C CNN
+F 2 "" H 3050 5700 60  0001 C CNN
+F 3 "" H 3050 5700 60  0001 C CNN
 	1    3050 5700
 	1    0    0    -1  
 $EndComp
@@ -424,6 +451,8 @@ U 1 1 5004F895
 P 1950 5800
 F 0 "#PWR07" H 1950 5900 40  0001 C CNN
 F 1 "3V3" H 1950 5925 40  0000 C CNN
+F 2 "" H 1950 5800 60  0001 C CNN
+F 3 "" H 1950 5800 60  0001 C CNN
 	1    1950 5800
 	1    0    0    -1  
 $EndComp
@@ -450,6 +479,7 @@ P 1350 6450
 F 0 "P1" H 1550 7000 60  0000 C CNN
 F 1 "CON-SENSOR" V 1550 6450 60  0000 C CNN
 F 2 "CON-SENSOR" H 1350 6450 60  0001 C CNN
+F 3 "" H 1350 6450 60  0001 C CNN
 	1    1350 6450
 	-1   0    0    -1  
 $EndComp
@@ -460,6 +490,7 @@ P 3450 6350
 F 0 "U1" H 3300 6850 60  0000 C CNN
 F 1 "M24C64" H 3450 6350 60  0000 C CNN
 F 2 "SOIC8" H 3450 6350 60  0001 C CNN
+F 3 "" H 3450 6350 60  0001 C CNN
 	1    3450 6350
 	-1   0    0    -1  
 $EndComp
