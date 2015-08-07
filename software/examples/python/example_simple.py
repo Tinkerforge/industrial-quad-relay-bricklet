@@ -8,11 +8,11 @@ UID = "XYZ" # Change to your UID
 import time
 
 from tinkerforge.ip_connection import IPConnection
-from tinkerforge.bricklet_industrial_quad_relay import IndustrialQuadRelay
+from tinkerforge.bricklet_industrial_quad_relay import BrickletIndustrialQuadRelay
 
 if __name__ == "__main__":
     ipcon = IPConnection() # Create IP connection
-    iqr = IndustrialQuadRelay(UID, ipcon) # Create device object
+    iqr = BrickletIndustrialQuadRelay(UID, ipcon) # Create device object
 
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
