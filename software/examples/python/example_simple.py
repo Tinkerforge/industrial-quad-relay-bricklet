@@ -17,7 +17,7 @@ if __name__ == "__main__":
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
 
-    # Turn relays alternating on/off for 10 times with 100ms delay
+    # Turn relays alternating on/off for 10 times with 100 ms delay
     for i in range(10):
         time.sleep(0.1)
         iqr.set_value(1 << 0)

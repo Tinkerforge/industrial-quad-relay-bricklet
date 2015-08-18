@@ -2,7 +2,7 @@ var Tinkerforge = require('tinkerforge');
 
 var HOST = 'localhost';
 var PORT = 4223;
-var UID = 'igV'; // Change to your UID
+var UID = 'XYZ'; // Change to your UID
 
 var ipcon = new Tinkerforge.IPConnection(); // Create IP connection
 var iqr = new Tinkerforge.BrickletIndustrialQuadRelay(UID, ipcon); // Create device object

@@ -3,7 +3,7 @@ function octave_example_simple()
     
     HOST = "localhost";
     PORT = 4223;
-    UID = "mT6"; % Change to your UID
+    UID = "XYZ"; % Change to your UID
 
     ipcon = java_new("com.tinkerforge.IPConnection"); % Create IP connection
     iqr = java_new("com.tinkerforge.BrickletIndustrialQuadRelay", UID, ipcon); % Create device object
@@ -11,7 +11,7 @@ function octave_example_simple()
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don"t use device before ipcon is connected
 
-    % Turn relays alternating on/off for 10 times with 100ms delay
+    % Turn relays alternating on/off for 10 times with 100 ms delay
     for i = 1:10
         pause(0.1);
         iqr.setValue(bitshift(1, 0));

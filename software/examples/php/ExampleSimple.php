@@ -8,7 +8,7 @@ use Tinkerforge\BrickletIndustrialQuadRelay;
 
 const HOST = 'localhost';
 const PORT = 4223;
-const UID = 'xyz'; // Change to your UID
+const UID = 'XYZ'; // Change to your UID
 
 $ipcon = new IPConnection(); // Create IP connection
 $iqr = new BrickletIndustrialQuadRelay(UID, $ipcon); // Create device object

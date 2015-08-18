@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define IPCON_EXPOSE_MILLISLEEP
+
 #include "ip_connection.h"
 #include "bricklet_industrial_quad_relay.h"
 
@@ -23,8 +25,18 @@ int main(void) {
 	}
 	// Don't use device before ipcon is connected
 
-	// Turn relay 0, 3 on and relay 1, 2 off.
-	industrial_quad_relay_set_value(&iqr, 1 | 8);
+	// Turn relays alternating on/off for 10 times with 100 ms delay
+	int i;
+	for(i = 0; i < 10; ++i) {
+		millisleep(100);
+		industrial_quad_relay_set_value(&iqr, 1 << 0);
+		millisleep(100);
+		industrial_quad_relay_set_value(&iqr, 1 << 1);
+		millisleep(100);
+		industrial_quad_relay_set_value(&iqr, 1 << 2);
+		millisleep(100);
+		industrial_quad_relay_set_value(&iqr, 1 << 3);
+	}
 
 	printf("Press key to exit\n");
 	getchar();

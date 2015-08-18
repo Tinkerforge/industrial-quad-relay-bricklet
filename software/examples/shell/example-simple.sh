@@ -4,5 +4,14 @@
 # change to your UID
 uid=XYZ
 
-# turn relay 0, 3 on and relay 1, 2 off: (1 << 0) | (1 << 3) = 9
-tinkerforge call industrial-quad-relay-bricklet $uid set-value 9
+# Turn relays alternating on/off for 10 times with 100 ms delay
+for i in 0 1 2 3 4 5 6 7 8 9; do
+	sleep 0.1
+	tinkerforge call industrial-quad-relay-bricklet $uid set-value 1
+	sleep 0.1
+	tinkerforge call industrial-quad-relay-bricklet $uid set-value 2
+	sleep 0.1
+	tinkerforge call industrial-quad-relay-bricklet $uid set-value 4
+	sleep 0.1
+	tinkerforge call industrial-quad-relay-bricklet $uid set-value 8
+done
