@@ -1,4 +1,4 @@
-#!/usr/bin/perl  
+#!/usr/bin/perl
 
 use Tinkerforge::IPConnection;
 use Tinkerforge::BrickletIndustrialQuadRelay;
@@ -29,4 +29,3 @@ for (my $i = 0; $i < 10; $i++)
 print "Press any key to exit...\n";
 <STDIN>;
 $ipcon->disconnect();
-
