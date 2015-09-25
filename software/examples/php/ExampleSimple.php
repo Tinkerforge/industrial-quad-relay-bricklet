@@ -16,16 +16,15 @@ $iqr = new BrickletIndustrialQuadRelay(UID, $ipcon); // Create device object
 $ipcon->connect(HOST, PORT); // Connect to brickd
 // Don't use device before ipcon is connected
 
-// Turn relays alternating on/off for 10 times with 100 ms delay
-for($i = 0; $i < 10; $i++)
-{
-    usleep(1000*100);
+// Turn relays alternating on/off 10 times with 100 ms delay
+for($i = 0; $i < 10; $i++) {
+    usleep(100*1000);
     $iqr->setValue(1 << 0);
-    usleep(1000*100);
+    usleep(100*1000);
     $iqr->setValue(1 << 1);
-    usleep(1000*100);
+    usleep(100*1000);
     $iqr->setValue(1 << 2);
-    usleep(1000*100);
+    usleep(100*1000);
     $iqr->setValue(1 << 3);
 }
 

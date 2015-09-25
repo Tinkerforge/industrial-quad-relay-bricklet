@@ -13,19 +13,19 @@ my $iqr = Tinkerforge::BrickletIndustrialQuadRelay->new(&UID, $ipcon); # Create 
 $ipcon->connect(&HOST, &PORT); # Connect to brickd
 # Don't use device before ipcon is connected
 
-# Turn relays alternating on/off for 10 times with 100 ms delay
+# Turn relays alternating on/off 10 times with 100 ms delay
 for (my $i = 0; $i < 10; $i++)
 {
     select(undef, undef, undef, 0.1);
-    $iqr->set_value(1);
+    $iqr->set_value(1 << 0);
     select(undef, undef, undef, 0.1);
-    $iqr->set_value(2);
+    $iqr->set_value(1 << 1);
     select(undef, undef, undef, 0.1);
-    $iqr->set_value(4);
+    $iqr->set_value(1 << 2);
     select(undef, undef, undef, 0.1);
-    $iqr->set_value(8);
+    $iqr->set_value(1 << 3);
 }
 
-print "Press any key to exit...\n";
+print "Press key to exit\n";
 <STDIN>;
 $ipcon->disconnect();

@@ -1,6 +1,6 @@
 function octave_example_simple()
     more off;
-    
+
     HOST = "localhost";
     PORT = 4223;
     UID = "XYZ"; % Change to your UID
@@ -9,10 +9,10 @@ function octave_example_simple()
     iqr = java_new("com.tinkerforge.BrickletIndustrialQuadRelay", UID, ipcon); % Create device object
 
     ipcon.connect(HOST, PORT); % Connect to brickd
-    % Don"t use device before ipcon is connected
+    % Don't use device before ipcon is connected
 
-    % Turn relays alternating on/off for 10 times with 100 ms delay
-    for i = 1:10
+    % Turn relays alternating on/off 10 times with 100 ms delay
+    for i = 0:9
         pause(0.1);
         iqr.setValue(bitshift(1, 0));
         pause(0.1);
@@ -22,7 +22,6 @@ function octave_example_simple()
         pause(0.1);
         iqr.setValue(bitshift(1, 3));
     end
-    
-    input("Press any key to exit...\n", "s");
+    input("Press key to exit\n", "s");
     ipcon.disconnect();
 end

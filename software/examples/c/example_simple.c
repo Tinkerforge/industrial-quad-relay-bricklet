@@ -25,7 +25,7 @@ int main(void) {
 	}
 	// Don't use device before ipcon is connected
 
-	// Turn relays alternating on/off for 10 times with 100 ms delay
+	// Turn relays alternating on/off 10 times with 100 ms delay
 	int i;
 	for(i = 0; i < 10; ++i) {
 		millisleep(100);

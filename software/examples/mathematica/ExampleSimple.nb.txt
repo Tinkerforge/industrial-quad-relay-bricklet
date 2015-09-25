@@ -3,14 +3,14 @@ LoadNETAssembly["Tinkerforge",NotebookDirectory[]<>"../../.."]
 
 host="localhost"
 port=4223
-uid="cmN"(* Change to your UID *)
+uid="XYZ"(*Change to your UID*)
 
-(* Create IPConnection and device object *)
+(*Create IPConnection and device object*)
 ipcon=NETNew["Tinkerforge.IPConnection"]
 iqr=NETNew["Tinkerforge.BrickletIndustrialQuadRelay",uid,ipcon]
 ipcon@Connect[host,port]
 
-(* Turn relays alternating on/off for 10 times with 100 ms delay *)
+(*Turn relays alternating on/off 10 times with 100 ms delay*)
 For[i=0,i<10,i++,
  Pause[0.1];
  iqr@SetValue[FromDigits[{0,0,0,1},2]];
@@ -19,10 +19,10 @@ For[i=0,i<10,i++,
  Pause[0.1];
  iqr@SetValue[FromDigits[{0,1,0,0},2]];
  Pause[0.1];
- iqr@SetValue[FromDigits[{1,0,0,0},2]];
+ iqr@SetValue[FromDigits[{1,0,0,0},2]]
 ]
 
-(* Clean up *)
+(*Clean up*)
 ipcon@Disconnect[]
 ReleaseNETObject[iqr]
 ReleaseNETObject[ipcon]
