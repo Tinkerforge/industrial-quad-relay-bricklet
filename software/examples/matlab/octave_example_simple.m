@@ -22,6 +22,7 @@ function octave_example_simple()
         pause(0.1);
         iqr.setValue(bitshift(1, 3));
     end
+
     input("Press key to exit\n", "s");
     ipcon.disconnect();
 end
