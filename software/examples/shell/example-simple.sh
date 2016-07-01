@@ -1,7 +1,7 @@
 #!/bin/sh
 # Connects to localhost:4223 by default, use --host and --port to change this
 
-uid=XYZ # Change to your UID
+uid=XYZ # Change XYZ to the UID of your Industrial Quad Relay Bricklet
 
 # Turn relays alternating on/off 10 times with 100 ms delay
 for i in 0 1 2 3 4 5 6 7 8 9; do
